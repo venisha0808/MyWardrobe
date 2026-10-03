@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Wardrobe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav>
+        <h2>My Wardrobe</h2>
+
+        <div>
+            <a href="#">Home</a>
+            <a href="#">Clothes</a>
+            <a href="#">Favorites</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1>Welcome to My Wardrobe 👗</h1>
+        <p>Organize your clothes digitally.</p>
+    </section>
+<section class="wardrobe">
+    <h2>My Clothes</h2>
+    <div class="filters">
+    <button onclick="filterClothes('All')">All</button>
+    <button onclick="filterClothes('Casual Wear')">Casual</button>
+    <button onclick="filterClothes('Formal Wear')">Formal</button>
+    <button onclick="filterClothes('Party Wear')">Party</button>
+    <button onclick="showFavorites()">♥ Favorites</button>
+</div>
+
+    
+<div class="clothes-container new-clothes" id="clothesContainer"></div>
+
+<div class="clothes-container existing-clothes">
+
+    <div class="clothing-card">
+        <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d" alt="T-Shirt">
+        <h3>T-Shirt</h3>
+        <p>Casual Wear</p>
+        <button onclick="addFavorite(this)">♡ Favorite</button>
+    </div>
+
+    <div class="clothing-card">
+        <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8" alt="Dress">
+        <h3>Dress</h3>
+        <p>Party Wear</p>
+        <button onclick="addFavorite(this)">♡ Favorite</button>
+    </div>
+
+    <div class="clothing-card">
+        <img src="https://images.unsplash.com/photo-1542272604-787c3835535d" alt="Jeans">
+        <h3>Jeans</h3>
+        <p>Casual Wear</p>
+        <button onclick="addFavorite(this)">♡ Favorite</button>
+    </div>
+
+</div>
+<section class="add-clothes">
+    <h2>Add New Clothing</h2>
+
+    <input type="text" id="clothingName" placeholder="Clothing name">
+
+    <input type="text" id="clothingCategory" placeholder="Category">
+
+    <button onclick="addClothing()">Add Clothing</button>
+</section>
+<script src="script.js"></script>
+</body>
+</html>
